@@ -15,7 +15,7 @@ import java.nio.DoubleBuffer;
 public class Cuenta {
     private int numero;
     private String nombre;
-    protected double saldo;
+    private double saldo;
 
     public Cuenta(int numero, String nombre, double saldo) { // ya no hay constructor vacio
         this.numero = numero;

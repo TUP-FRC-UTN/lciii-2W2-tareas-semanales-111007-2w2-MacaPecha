@@ -19,12 +19,14 @@ public class CuentaCorriente extends Cuenta {
     
     @Override
     public void extraer(double importe){
-        if (saldo - importe < acuerdo) {
+        double nSaldo = super.getSaldo();
+        if (nSaldo - importe < acuerdo) {
             System.out.println("No puede retirar esa cantidad porque supera su acuerdo de saldo negativo");
         } else {
-            saldo -= importe;
-            System.out.println("Su saldo actual es de: " + saldo);
+            nSaldo = nSaldo - importe;
+            System.out.println("Su saldo actual es de: " + nSaldo);
         }
+        super.setSaldo(nSaldo);
     }
 
     @Override

@@ -25,10 +25,13 @@ public class Banco {
         Cuenta cc = new CuentaCorriente(-15, 2, "juan", 100);
         
         ca.depositar(100);
+        ca.depositar(2);
         cc.depositar(150);
+        cc.depositar(2);
         ca.extraer(201);
-        cc.extraer(260);
-        cc.extraer(6);
+        ca.extraer(3);
+        cc.extraer(267);
+        cc.extraer(1);
     }
     
 }

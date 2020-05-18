@@ -17,12 +17,14 @@ public class CajaAhorro extends Cuenta {
     
     @Override
     public void extraer(double importe){
-        if (saldo - importe < 0) {
+        double nSaldo = getSaldo();
+        if (nSaldo - importe < 0) {
             System.out.println("No puede retirar esa cantidad");
         } else {
-            saldo -= importe;
-            System.out.println("Su saldo actual es de: " + saldo);
+            nSaldo -= importe;
+            System.out.println("Su saldo actual es de: " + nSaldo);
         }
+        super.setSaldo(nSaldo);
     }
     
 }
