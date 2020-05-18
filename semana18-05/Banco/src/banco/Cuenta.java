@@ -12,7 +12,7 @@ import java.nio.DoubleBuffer;
  *
  * @author Maka
  */
-public class Cuenta {
+public abstract class Cuenta {
     private int numero;
     private String nombre;
     private double saldo;
@@ -46,8 +46,7 @@ public class Cuenta {
         }
     }
     
-    public void extraer(double importe){
-    }
+    public abstract void extraer(double importe);
 
     @Override
     public String toString() {
